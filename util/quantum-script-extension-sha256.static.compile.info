@@ -1,0 +1,7 @@
+--lib qse-sha256
+--project-base=quantum-script-extension-sha256
+--source-is-separate
+--use-project=quantum-script.static
+--use-project=qse-buffer.static
+--install-dev
+--install-inc=quantum-script-extension

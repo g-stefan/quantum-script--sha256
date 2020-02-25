@@ -1,2 +1,11 @@
-# quantum-script-extension-sha256
-Quantum Script Extension SHA256
+# Quantum Script Extension SHA256
+
+SHA256;\
+SHA256.hash(str);\
+SHA256.hashToBuffer(str);
+
+## License
+
+Copyright (c) Grigore Stefan
+
+Licensed under the [MIT](LICENSE) license.
