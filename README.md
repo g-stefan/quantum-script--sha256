@@ -1,8 +1,10 @@
 # Quantum Script Extension SHA256
 
-SHA256;\
-SHA256.hash(str);\
+```javascript
+SHA256;
+SHA256.hash(str);
 SHA256.hashToBuffer(str);
+```
 
 ## License
 
