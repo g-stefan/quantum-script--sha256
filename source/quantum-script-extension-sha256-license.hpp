@@ -11,7 +11,7 @@
 #define QUANTUM_SCRIPT_EXTENSION_SHA256_LICENSE_HPP
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_SHA256__EXPORT_HPP
-#include "quantum-script-extension-sha256--export.hpp"
+#	include "quantum-script-extension-sha256--export.hpp"
 #endif
 
 namespace Quantum {

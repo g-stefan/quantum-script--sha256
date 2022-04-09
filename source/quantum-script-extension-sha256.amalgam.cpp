@@ -12,6 +12,5 @@
 #include "quantum-script-extension-sha256-license.cpp"
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_SHA256_NO_VERSION
-#include "quantum-script-extension-sha256-version.cpp"
+#	include "quantum-script-extension-sha256-version.cpp"
 #endif
-

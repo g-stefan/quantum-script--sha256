@@ -14,7 +14,7 @@
 #include "quantum-script-extension-sha256-license.hpp"
 #include "quantum-script-extension-sha256.hpp"
 #ifndef QUANTUM_SCRIPT_EXTENSION_SHA256_NO_VERSION
-#include "quantum-script-extension-sha256-version.hpp"
+#	include "quantum-script-extension-sha256-version.hpp"
 #endif
 
 #include "quantum-script-variablestring.hpp"
@@ -52,7 +52,6 @@ namespace Quantum {
 					executive->registerInternalExtension("SHA256", initExecutive);
 				};
 
-
 				void initExecutive(Executive *executive, void *extensionId) {
 
 					String info = "SHA256\r\n";
@@ -81,4 +80,3 @@ extern "C" QUANTUM_SCRIPT_EXTENSION_SHA256_EXPORT void quantumScriptExtension(Qu
 	Quantum::Script::Extension::SHA256::initExecutive(executive, extensionId);
 };
 #endif
-
