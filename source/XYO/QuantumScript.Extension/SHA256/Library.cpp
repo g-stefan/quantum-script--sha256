@@ -31,6 +31,17 @@ namespace XYO::QuantumScript::Extension::SHA256 {
 		return retV;
 	};
 
+	static TPointer<Variable> fileHash(VariableFunction *function, Variable *this_, VariableArray *arguments) {
+#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+		printf("- sha256-file-hash\n");
+#endif
+		String retVal;
+		if(XYO::Cryptography::Util::fileHashSHA256((arguments->index(0))->toString(),retVal)){
+			return VariableString::newVariable(retVal);
+		};
+		return Context::getValueUndefined();
+	};
+
 	void registerInternalExtension(Executive *executive) {
 		executive->registerInternalExtension("SHA256", initExecutive);
 	};
@@ -49,6 +60,7 @@ namespace XYO::QuantumScript::Extension::SHA256 {
 		executive->compileStringX("var SHA256={};");
 		executive->setFunction2("SHA256.hash(str)", hash);
 		executive->setFunction2("SHA256.hashToBuffer(str)", hashToBuffer);
+		executive->setFunction2("SHA256.fileHash(filename)", fileHash);
 	};
 
 };
