@@ -15,14 +15,14 @@
 namespace XYO::QuantumScript::Extension::SHA256 {
 
 	static TPointer<Variable> hash(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- sha256-hash\n");
 #endif
 		return VariableString::newVariable(XYO::Cryptography::SHA256::hash((arguments->index(0))->toString()));
 	};
 
 	static TPointer<Variable> hashToBuffer(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- sha256-hash-to-buffer\n");
 #endif
 		TPointer<Variable> retV(Extension::Buffer::VariableBuffer::newVariable(32));
@@ -32,7 +32,7 @@ namespace XYO::QuantumScript::Extension::SHA256 {
 	};
 
 	static TPointer<Variable> fileHash(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- sha256-file-hash\n");
 #endif
 		String retVal;
