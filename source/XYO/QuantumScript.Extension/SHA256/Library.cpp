@@ -66,7 +66,7 @@ namespace XYO::QuantumScript::Extension::SHA256 {
 };
 
 #ifdef XYO_COMPILE_DYNAMIC_LIBRARY
-extern "C" void quantumScriptExtension(XYO::QuantumScript::Executive *executive, void *extensionId) {
+extern "C" XYO_QUANTUMSCRIPT_EXTENSION_SHA256_EXPORT void quantumScriptExtension(XYO::QuantumScript::Executive *executive, void *extensionId) {
 	XYO::QuantumScript::Extension::SHA256::initExecutive(executive, extensionId);
 };
 #endif
