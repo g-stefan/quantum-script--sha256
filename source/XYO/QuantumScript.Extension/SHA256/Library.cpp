@@ -36,7 +36,7 @@ namespace XYO::QuantumScript::Extension::SHA256 {
 		printf("- sha256-file-hash\n");
 #endif
 		String retVal;
-		if(XYO::Cryptography::Util::fileHashSHA256((arguments->index(0))->toString(),retVal)){
+		if (XYO::Cryptography::Util::fileHashSHA256((arguments->index(0))->toString(), retVal)) {
 			return VariableString::newVariable(retVal);
 		};
 		return Context::getValueUndefined();
@@ -49,7 +49,7 @@ namespace XYO::QuantumScript::Extension::SHA256 {
 	void initExecutive(Executive *executive, void *extensionId) {
 
 		String info = "SHA256\r\n";
-		info << License::shortLicense();
+		info << License::shortLicense().c_str();
 
 		executive->setExtensionName(extensionId, "SHA256");
 		executive->setExtensionInfo(extensionId, info);
