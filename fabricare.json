@@ -24,7 +24,6 @@
 					"quantum-script--sha256"
 				]
 			}
-		],
-		"hasGithub" : true
+		]
 	}
 }
